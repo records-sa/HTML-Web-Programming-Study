@@ -13,21 +13,17 @@ HTML 페이지를 구성하는 각 부품을 요소라고 합니다. 제목, 본
 HTML 요소들은 내용을 가질 수 있는 요소와 내용을 가질 수 없는 요소로 구분할 수 있습니다. 내용을 가질 수 있는 요소는 <요소 이름>내용</요소 이름> 형태로 생성하고, 내용을 가질 수 없는 요소는 <요소 이름> 형태로 생성합니다.
 
 - 내용을 가질 수 있는 요소
-    
-    ```html
-    <h1>Hello HTML5</h1>
-    <p>즐거운 웹 프로그래밍 입문</p>
-    <audio></audio>
-    ```
-    
+  ```html
+  <h1>Hello HTML5</h1>
+  <p>즐거운 웹 프로그래밍 입문</p>
+  <audio></audio>
+  ```
 - 내용을 가질 수 없는 요소
-    
-    ```html
-    <img>
-    <br>
-    <hr>
-    ```
-    
+  ```html
+  <img />
+  <br />
+  <hr />
+  ```
 
 내용은 텍스트가 될 수도 있고, 다른 요소가 될 수도 있습니다. 또 내용을 가질 수 있는 요소에 내용을 입력하지 않아도 상관 없습니다.
 
@@ -41,8 +37,12 @@ HTML 표기법은 <요소 이름>만으로 요소를 생성합니다. 하지만 
 
 그래서 많은 개발자가 명확하게 내용을 가질 수 없는 태그라는 것을 표기하고자 XML(eXtensible Markup Language) 작성 방식을 적용해 XHTML 표기법을 만들었습니다. XML을 설명해야 이후 내용을 진행할 수 있어 자세한 내용은 생략하지만, 간단하게 예를 들면 다음과 같습니다.
 
-- HTML 표기법: <img>, <br>, <hr>
-- XHTML 표기법: <img />, <br />, <hr />
+```html
+- HTML 표기법: <img />, <br />,
+<hr />
+- XHTML 표기법: <img />, <br />,
+<hr />
+```
 
 둘 다 많이 사용되므로 어떤 표기 방법을 사용해도 상관없습니다. 이 책에서는 HTML 표기법으로 코드를 작성합니다.
 
@@ -51,9 +51,10 @@ HTML 표기법은 <요소 이름>만으로 요소를 생성합니다. 하지만 
 속성은 태그에 추가 정보를 부여할 때 사용하는 것으로, 형태는 아래와 같습니다. (a)는 h1 태그에 title 속성을 부여하는 예입니다. (b)는 이미지를 만들 때 사용하는 내부 문자가 없는 img 태그 예로 src 속성에 출력할 이미지 정보를 입력합니다. 속성도 W3C에서 정의한 표준에 맞추어 사용합니다. 각 태그 속성은 3~4장에서 자세히 알아보겠습니다.
 
 ```html
-(a) <h1 title='header'>Hello HTML5</h1>
+(a)
+<h1 title="header">Hello HTML5</h1>
 
-(b) <img src='image.png'>
+(b) <img src="image.png" />
 ```
 
 ## 3. 주석
@@ -63,14 +64,14 @@ HTML 표기법은 <요소 이름>만으로 요소를 생성합니다. 하지만 
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- title 태그 -->
-	<title>TITLE</title>
-</head>
-<body>
-	<!-- h1 태그 -->
-	<h1>Hello HTML5</h1>
-</body>
+  <head>
+    <!-- title 태그 -->
+    <title>TITLE</title>
+  </head>
+  <body>
+    <!-- h1 태그 -->
+    <h1>Hello HTML5</h1>
+  </body>
 </html>
 ```
 
@@ -78,18 +79,22 @@ HTML 표기법은 <요소 이름>만으로 요소를 생성합니다. 하지만 
 
 ## 1. HTML5 페이지의 구조
 
-이번에는 HTML 페이지의 기본 구조를 살펴봅니다. 아직 코드를 직접 입력하지 않아 어렵다고 느끼는 내용도 있겠지만, 나중에 직접 실습해 보면 별로 어렵지 않으므로 미리 겁먹지 마세요. 모든 HTML5  페이지는 크게 다음 구조로 작성합니다.
+이번에는 HTML 페이지의 기본 구조를 살펴봅니다. 아직 코드를 직접 입력하지 않아 어렵다고 느끼는 내용도 있겠지만, 나중에 직접 실습해 보면 별로 어렵지 않으므로 미리 겁먹지 마세요. 모든 HTML5 페이지는 크게 다음 구조로 작성합니다.
 
 ```html
-<!DOCTYPE html>  // 웹 브라우저에서 HTML5 문서라는 것을 알리기 위해 반드시 첫 행에 나와야 합니다.
-<html>  // 모든 HTML 페이지의 기본 요소로, 모든 태그는 이 html 태그 내부에 작성합니다.
-<head>  // body 태그에 필요한 스타일 시트와 자바스크립트를 제공합니다.
-	<!-- title 태그 -->
-	<title>TITLE</title>  // 웹 브라우저에 표시하는 제목을 지정합니다.
-</head>
-<body>  // 사용자에게 실제로 보이는 부분을 작성하는 곳입니다.
-
-</body>
+<!DOCTYPE html> // 웹 브라우저에서 HTML5 문서라는 것을 알리기 위해 반드시 첫
+행에 나와야 합니다.
+<html>
+  // 모든 HTML 페이지의 기본 요소로, 모든 태그는 이 html 태그 내부에 작성합니다.
+  <head>
+    // body 태그에 필요한 스타일 시트와 자바스크립트를 제공합니다.
+    <!-- title 태그 -->
+    <title>TITLE</title>
+    // 웹 브라우저에 표시하는 제목을 지정합니다.
+  </head>
+  <body>
+    // 사용자에게 실제로 보이는 부분을 작성하는 곳입니다.
+  </body>
 </html>
 ```
 
@@ -117,12 +122,12 @@ HTML 페이지를 만들고 실행하는 방법을 알아봅니다. 간단하지
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-	<title>HTML5 Basic</title>
-</head>
-<body>
-	<h1>Hello World..!</h1>
-</body>
+  <head>
+    <title>HTML5 Basic</title>
+  </head>
+  <body>
+    <h1>Hello World..!</h1>
+  </body>
 </html>
 ```
 
@@ -139,18 +144,18 @@ HTML 페이지를 만들고 실행하는 방법을 알아봅니다. 간단하지
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-	<title>HTML5 Basic</title>
-	<style>
-		h1 {
-			color: white;
-			background: black;
-		}
-	</style>
-</head>
-<body>
-	<h1>Hello World..!</h1>
-</body>
+  <head>
+    <title>HTML5 Basic</title>
+    <style>
+      h1 {
+        color: white;
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World..!</h1>
+  </body>
 </html>
 ```
 
@@ -159,22 +164,19 @@ HTML 페이지를 만들고 실행하는 방법을 알아봅니다. 간단하지
 비주얼 스튜디오 코드의 파일 - 새 파일 메뉴를 선택해 새 파일을 생성하고 Style.css라는 이름으로 저장합니다. 파일을 저장할 때 에디터가 확장자를 자동으로 인식합니다. 이어서 css 코드 내용을 작성한 후 다시 저장합니다. 그런 다음 앞서 작성한 HTMLPage.html을 link 태그를 사용해 외부 스타일시트를 불러오도록 수정합니다. 변경된 내용을 HTMLPageWithLink.html로 저장하고 실행합니다.
 
 ```html
-h1 {
-	color: white;
-	background: black;
-}
+h1 { color: white; background: black; }
 ```
 
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-	<title>HTML5 Basic</title>
-	<link rel='stylesheet' href='Style.css'>
-</head>
-<body>
-	<h1>Hello World..!</h1>
-</body>
+  <head>
+    <title>HTML5 Basic</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <h1>Hello World..!</h1>
+  </body>
 </html>
 ```
 
@@ -191,16 +193,16 @@ h1 {
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-	<title>HTML5 Basic</title>
-	<script>
-		// 경고 창을 출력합니다.
-		alert('Hello JavaScript!');
-	</script>
-</head>
-<body>
-	<h1>Hello World..!</h1>
-</body>
+  <head>
+    <title>HTML5 Basic</title>
+    <script>
+      // 경고 창을 출력합니다.
+      alert('Hello JavaScript!');
+    </script>
+  </head>
+  <body>
+    <h1>Hello World..!</h1>
+  </body>
 </html>
 ```
 
@@ -215,13 +217,13 @@ alert('OuterScript');
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-	<title>HTML5 Basic</title>
-	<script src='OuterJavaScript.js'></script>
-</head>
-<body>
-	<h1>Hello World..!</h1>
-</body>
+  <head>
+    <title>HTML5 Basic</title>
+    <script src="OuterJavaScript.js"></script>
+  </head>
+  <body>
+    <h1>Hello World..!</h1>
+  </body>
 </html>
 ```
 
