@@ -1,0 +1,49 @@
+<!-- 기본 예제 6-4. display 속성-->
+<!--1. none 키워드 적용하기-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Display Property</title>
+    <style>
+      #box {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <span>더미 객체</span>
+    <div id="box">대상 객체
+    </div>
+    <span>더미 객체</span>
+  </body>
+</html>
+
+<!--2. block 키워드 적용하기-->
+<style>
+  #box {
+    display: block;
+  }
+</style>
+
+<!--3. inline과 inline-block 키워드 비교하기-->
+<style>
+  #box {
+    /* inline 키워드를 적용하면 width, height 속성이 지정되지 않음
+    margin 속성이 div 태그의 왼쪽, 오른쪽으로만 적용됨*/
+    display: inline;
+    background-color: red;
+    width: 100px; height: 100px;
+    margin: 10px;
+  }
+</style>
+
+<style>
+  #box {
+    /* inline-block 키워드를 적용하면 width, height 속성이 적용됨
+    margin 속성도 상하좌우로 적용됨*/
+    display: inline-block;
+    background-color: red;
+    width: 100px; height: 100px;
+    margin: 10px;
+  }
+</style>

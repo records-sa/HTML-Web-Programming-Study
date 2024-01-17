@@ -1,0 +1,104 @@
+<!--1. 박스 크기와 여백-->
+<!-- 기본 예제 6-1. 박스 크기와 패딩 조정-->
+<!--1. width와 height 속성 적용하기-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Property Basic</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
+
+<!--2. margin과 padding 속성 적용하기-->
+<style>
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    border: 20px solid black;
+    margin: 10px;
+    padding: 30px;
+  }
+</style>
+
+<!-- 기본 예제 6-2. 박스 여백 부분 조정-->
+<!--1. 네 방향 속성 지정하기-->
+<style>
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    /* margin: 위쪽 오른쪽 아래쪽 왼쪽*/
+    margin: 0 30px 0 30px;
+    /* padding: 위쪽 오른쪽 아래쪽 왼쪽*/
+    padding: 0 30px 0 30px;
+  }
+</style>
+
+<!--2. 두 방향 속성 지정하기-->
+<style>
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    /* margin: <위아래> <왼쪽오른쪽> */
+    margin: 0 30px;
+    /* padding: <위아래> <왼쪽오른쪽> */
+    padding: 0 30px;
+  }
+</style>
+
+<!--2. 박스 테두리-->
+<!-- 기본 예제 6-3. 박스 테두리 조정-->
+<!--1. 기본 테두리 만들기-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Property Basic</title>
+    <style>
+      .box {
+        border-width: thick;
+        border-style: dashed;
+        border-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Lorem ipsum dolor sit amet</h1>
+    </div>
+  </body>
+</html>
+
+<!--2. 둥근 테두리 만들기-->
+<style>
+  .box {
+    border-width: thick;
+    border-style: dashed;
+    border-color: black;
+    border-radius: 20px;
+  }
+</style>
+
+<!--3. 모서리마다 둥글기를 다르게 적용하기-->
+<style>
+  .box {
+    border-width: thick;
+    border-style: dashed;
+    border-color: black;
+    /*border-radius: '왼쪽 위' '오른쪽 위' '오른쪽 아래' '왼쪽 아래'*/
+    border-radius: 50px 40px 20px 10px;
+  }
+</style>

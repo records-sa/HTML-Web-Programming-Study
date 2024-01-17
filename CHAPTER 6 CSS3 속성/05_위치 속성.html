@@ -1,0 +1,156 @@
+<!--1. 요소의 고정 위치와 상대 위치 지정 -->
+<!-- 기본 예제 6-12. position 속성 -->
+<!--1. absolute 키워드 적용하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Font Property</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </body>
+</html>
+
+<!--2. left 속성과 top 속성 적용하기 -->
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+  .box:nth-child(1) {
+    background-color: red;
+    left: 10px;
+    top: 10px;
+  }
+  .box:nth-child(2) {
+    background-color: green;
+    left: 50px;
+    top: 50px;
+  }
+  .box:nth-child(3) {
+    background-color: blue;
+    left: 90px;
+    top: 90px;
+  }
+</style>
+
+<!--3. z-index 속성 적용하기 -->
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+  .box:nth-child(1) {
+    background-color: red;
+    left: 10px;
+    top: 10px;
+    z-index: 100;
+  }
+  .box:nth-child(2) {
+    background-color: green;
+    left: 50px;
+    top: 50px;
+    z-index: 10;
+  }
+  .box:nth-child(3) {
+    background-color: blue;
+    left: 90px;
+    top: 90px;
+    z-index: 1;
+  }
+</style>
+
+<!--2. 위치 속성 공식 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Font Property</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+      .box:nth-child(1) {
+        background-color: red;
+        left: 10px;
+        top: 10px;
+        z-index: 100;
+      }
+      .box:nth-child(2) {
+        background-color: green;
+        left: 50px;
+        top: 50px;
+        z-index: 10;
+      }
+      .box:nth-child(3) {
+        background-color: blue;
+        left: 90px;
+        top: 90px;
+        z-index: 1;
+      }
+
+      body > div {
+        width: 400px;
+        height: 100px;
+        border: 3px solid black;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <h1>Lorem ipsum dolor sit amet</h1>
+  </body>
+</html>
+
+<!-- 3. 내용이 요소 크기를 벗어날 때 처리 방법 -->
+<!-- 기본 예제 6-13. overflow 속성 -->
+<!-- 1. hidden 키워드 적용하기 -->
+<style>
+  body > div {
+    width: 400px;
+    height: 100px;
+    border: 3px solid black;
+    position: relative;
+    overflow: hidden;
+  }
+</style>
+
+<!-- 2. scroll 키워드 적용하기 -->
+<style>
+  body > div {
+    width: 400px;
+    height: 100px;
+    border: 3px solid black;
+    position: relative;
+    overflow: scroll;
+  }
+</style>
+
+<!-- 3. overflow-x와 overflow-y 속성 적용하기 -->
+<style>
+  body > div {
+    width: 400px;
+    height: 100px;
+    border: 3px solid black;
+    position: relative;
+    overflow-y: scroll;
+  }
+</style>

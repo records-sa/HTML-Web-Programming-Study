@@ -1,0 +1,100 @@
+<!-- 1. 그림자 속성 -->
+<!-- 기본 예제 6-16. 글자와 박스에 그림자 생성 -->
+<!-- 1. 글자에 그림자 만들기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Property Basic</title>
+    <style>
+      h1 {
+        text-shadow: 5px 5px 5px black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+  </body>
+</html>
+
+<!-- 2. 박스에 그림자 만들기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Property Basic</title>
+    <style>
+      h1 {
+        border: 3px solid black;
+        box-shadow: 10px 10px 30px black;
+        text-shadow: 5px 5px 5px black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Lorem ipsum dolor sit amet</h1>
+    </div>
+  </body>
+</html>
+
+<!-- 3. 중첩 그림자 만들기 -->
+<style>
+  h1 {
+    border: 3px solid black;
+    box-shadow: 10px 10px 10px black, 10px 10px 20px orange, 10px 10px 30px red;
+    text-shadow: 10px 10px 10px black, 10px 10px 20px orange, 10px 10px 30px red;
+  }
+</style>
+
+<!-- 2. 그레이디언트 속성 -->
+<!-- 기본 예제 6-18. 그레이디언트 생성 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Property Basic</title>
+    <style>
+      div {
+        font-family: 'Times New Roman';
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+
+        /* Old browsers */
+        background: #f85032;
+        /* FF3.6+ */
+        background: -moz-linear-gradient(
+          top,
+          #f85032 0%,
+          #f16f5c 50%,
+          #f6290c 51%,
+          #f02f17 71%,
+          #e73827 100%
+        );
+        /* Chrome10-25, Safari5.1-6 */
+        background: -webkit-linear-gradient(
+          top,
+          #f85032 0%,
+          #f16f5c 50%,
+          #f6290c 51%,
+          #f02f17 71%,
+          #e73827 100%
+        );
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: linear-gradient(
+          top,
+          #f85032 0%,
+          #f16f5c 50%,
+          #f6290c 51%,
+          #f02f17 71%,
+          #e73827 100%
+        );
+        /* IE6-9 */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f85032', endColorstr='#e73827', GradientType=0);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>CSS3 그레이디언트</h1>
+    </div>
+  </body>
+</html>
