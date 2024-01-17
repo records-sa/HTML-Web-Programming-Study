@@ -1,0 +1,160 @@
+<!-- 1. 수평 정렬 레이아웃 -->
+<!-- 응용 예제 7-1. 수평 정렬 레이아웃 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Float With Overflow</title>
+    <style>
+      div.container {
+        overflow: hidden;
+      }
+      div.item {
+        float: left;
+        margin: 0 3px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="container">
+      <div class="item">Menu - 1</div>
+      <div class="item">Menu - 2</div>
+      <div class="item">Menu - 3</div>
+      <div class="item">Menu - 4</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </body>
+</html>
+
+<!-- 2. 중앙 정렬 레이아웃 -->
+<!-- 응용 예제 7-2. 중앙 정렬 레이아웃 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Margin Width</title>
+    <style>
+      /* 초기화 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 주제 */
+      body {
+        margin: 0 auto;
+        width: 960px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum</h1>
+    <h2>Donec at pharetra orci</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Integer nibh tellus, tristique quis blandit quis, consequat</p>
+  </body>
+</html>
+
+<!-- 3. One True 레이아웃 -->
+<!-- 응용 예제 7-3. One True 레이아웃 -->
+<!-- 1. 행 구성하기 -->
+<body>
+  <div id="top"></div>
+  <div id="middle"></div>
+  <div id="bottom"></div>
+</body>
+
+<!-- 2. 열 구성하기 -->
+<body>
+  <div id="top"></div>
+  <div id="middle">
+    <div id="left"></div>
+    <div id="right"></div>
+  </div>
+  <div id="bottom"></div>
+</body>
+
+<!-- 3. 레이아웃 구성하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>One True Layout</title>
+    <style>
+      body {
+        width: 500px;
+        margin: 10px auto;
+      }
+
+      #middle {
+        overflow: hidden;
+      }
+      #left {
+        float: left;
+        width: 150px;
+        background: red;
+      }
+      #right {
+        float: right;
+        width: 350px;
+        background: blue;
+      }
+
+      #top {
+        background: green;
+      }
+      #bottom {
+        background: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top">Lorem ipsum dolor sit amet, consectetur</div>
+    <div id="middle">
+      <div id="left">Lorem ipsum dolor sit amet, consectetur</div>
+      <div id="right">Lorem ipsum dolor sit amet, consectetur</div>
+    </div>
+    <div id="bottom">Lorem ipsum dolor sit amet, consectetur</div>
+  </body>
+</html>
+
+<!-- Flex 레이아웃 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>One True Layout</title>
+    <style>
+      body {
+        width: 500px;
+        margin: 10px auto;
+      }
+
+      #middle {
+        display: flex;
+      }
+      #left {
+        width: 150px;
+        background: red;
+      }
+      #right {
+        width: 350px;
+        background: blue;
+      }
+
+      #top {
+        background: green;
+      }
+      #bottom {
+        background: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top">Lorem ipsum dolor sit amet, consectetur</div>
+    <div id="middle">
+      <div id="left">Lorem ipsum dolor sit amet, consectetur</div>
+      <div id="right">Lorem ipsum dolor sit amet, consectetur</div>
+    </div>
+    <div id="bottom">Lorem ipsum dolor sit amet, consectetur</div>
+  </body>
+</html>

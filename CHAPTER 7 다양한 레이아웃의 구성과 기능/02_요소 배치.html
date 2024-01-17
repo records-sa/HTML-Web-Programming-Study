@@ -1,0 +1,134 @@
+<!-- 1. 절대 위치를 사용한 요소 배치 -->
+<!-- 응용 예제 7-4. 절대 위치를 사용한 요소 배치 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Absolute Position</title>
+    <style>
+      #container {
+        width: 500px;
+        height: 300px;
+        border: 3px solid black;
+        overflow: hidden;
+        position: relative;
+      }
+      .circle {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50% 50%;
+      }
+      #red {
+        background: red;
+        left: 20px;
+        top: 20px;
+      }
+      #green {
+        background: red;
+        left: 20px;
+        top: 20px;
+      }
+      #blue {
+        background: red;
+        left: 20px;
+        top: 20px;
+      }
+      #yellow {
+        background: red;
+        left: 20px;
+        top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dummy Text</h1>
+    <div id="container">
+      <div id="'red" class="circle"></div>
+      <div id="'green" class="circle"></div>
+      <div id="'blue" class="circle"></div>
+      <div id="'yellow" class="circle"></div>
+    </div>
+    <h1>Dummy Text</h1>
+  </body>
+</html>
+
+<!-- 2. 요소를 중앙에 배치 -->
+<!-- 응용 예제 7-5. 요소의 중앙 배치 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Absolute Position</title>
+    <style>
+      /* 초기화 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 주제 */
+      body {
+        margin: 0 auto;
+        width: 960px;
+      }
+
+      #container {
+        /* 색상 및 크기 적용 */
+        width: 500px;
+        height: 250px;
+        background: orange;
+
+        /* 위치 설정 */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -250px;
+        margin-top: -125px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>요소의 중앙 배치</h1>
+    </div>
+  </body>
+</html>
+
+<!-- 3. 요소를 고정 위치에 배치 -->
+<!-- 응용 예제 7-6. 고정 바 배치 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Absolute Position</title>
+    <style>
+      .container {
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+      .top_bar {
+        background: red;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 50px;
+      }
+      .left_bar {
+        background: blue;
+        position: fixed;
+        left: 0;
+        top: 50px;
+        right: 0;
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top_bar"></div>
+    <div class="left_bar"></div>
+    <div id="container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Donec at pharetra orci. Ut tincidnut porta aliquam.</p>
+      <p>Integer nibh tellus, tristique quis blandit quis, consequat</p>
+    </div>
+  </body>
+</html>
