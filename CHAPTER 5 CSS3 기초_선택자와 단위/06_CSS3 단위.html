@@ -1,0 +1,100 @@
+<!--2. 크기 단위-->
+<!--기본 예제 5-10. 다양한 크기의 단위 적용-->
+<!--1. HTML 페이지 만들기-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Units</title>
+    <style></style>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </body>
+</html>
+
+<!--2. % 단위 적용하기-->
+<style>
+  p:nth-child(1) {
+  }
+  p:nth-child(2) {
+    font-size: 100%;
+  }
+  p:nth-child(3) {
+    font-size: 150%;
+  }
+  p:nth-child(4) {
+    font-size: 200%;
+  }
+</style>
+
+<!--3. em 단위 적용하기-->
+<style>
+  p:nth-child(1) {
+  }
+  p:nth-child(2) {
+    font-size: 1em;
+  }
+  p:nth-child(3) {
+    font-size: 1.5em;
+  }
+  p:nth-child(4) {
+    font-size: 2em;
+  }
+</style>
+
+<!--4. px 단위 적용하기-->
+<style>
+  p:nth-child(1) {
+  }
+  p:nth-child(2) {
+    font-size: 16px;
+  }
+  p:nth-child(3) {
+    font-size: 24px;
+  }
+  p:nth-child(4) {
+    font-size: 32px;
+  }
+</style>
+
+<!--3. 색상 단위-->
+<style>
+  h1 {
+    background-color: red;
+  }
+  h2 {
+    background-color: orange;
+  }
+  h3 {
+    background-color: blue;
+  }
+</style>
+
+<!--4. URL 단위-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Units</title>
+    <style>
+      body {
+        background-image: url('Dessert.jpg');
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </body>
+</html>
+
+/* 현재 폴더의 Dessert.jpg */
+background-image: url('Dessert.jpg');
+
+/* Other 폴더의 Dessert.jpg */
+background-image: url('Other/Dessert.jpg');
+
+/* 루트 폴더의 Dessert.jpg */
+background-image: url('/Dessert.jpg');

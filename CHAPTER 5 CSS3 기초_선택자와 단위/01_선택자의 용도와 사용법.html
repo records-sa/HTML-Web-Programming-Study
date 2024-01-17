@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Selector Basic</title>
+    <style>
+      h1 {
+        color: red;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS3 선택자 기본</h1>
+  </body>
+</html>
+
+<!-- CSS3 선택자 종류 -->
+- 전체 선택자: *(*)
+- 태그 선택자: 태그(h1)
+- 아이디 선택자: #아이디(#id)
+- 클래스 선택자: .클래스(.header)
+
+- 속성 선택자
+  - 선택자[속성 = 값](input[type = text])
+  - 선택자[속성 ~= 값](div[data-role ~= row])
+  - 선택자[속성 |= 값](div[data-role |= row])
+  - 선택자[속성 ^= 값](div[data-role ^= row])
+  - 선택자[속성 $= 값](div[data-role $= 9])
+  - 선택자[속성 *= 값](div[data-role *= row])
+
+- 후손 선택자: 선택자 선택자(header h1)
+- 자손 선택자: 선택자 > 선택자(header > h1)
+
+- 반응 선택자
+  - 선택자:active(div:active)
+  - 선택자:hover(div:hover)
+
+- 상태 선택자
+  - 선택자:checked(input:checked)
+  - 선택자:focus(input:focus)
+  - 선택자:enabled(input:enabled)
+  - 선택자:disabled(input:disabled)
+
+- 구조 선택자
+  - 선택자:first-child(li:first-child)
+  - 선택자:last-child(li:last-child)
+  - 선택자:nth-child(수열)(li:nth-child(2n+1))
+  - 선택자:nth-last-child(수열)(li:nth-last-child(2n+1))
+  - 선택자:first-of-type(h1:first-of-type)
+  - 선택자:last-of-type(h1:last-of-type)
+  - 선택자:nth-of-child(수열)(li:nth-of-child(2n+1))
+  - 선택자:nth-last-of-child(수열)(li:nth-last-of-child(2n+1))
+
+- 동위 선택자
+  - 선택자 + 선택자: h1 + div
+  - 선택자 ~ 선택자: h1 ~ div
+
+- 링크 선택자
+  - 선택자:link(a:link)
+  - 선택자:visited(a:visited)
+
+- 문자 선택자
+  - 선택자::first-letter(p::first-letter)
+  - 선택자::first-line(p::first-line)
+  - 선택자::after(p::after)
+  - 선택자::befoer(p::befoer)
+  - 선택자::selection(p::selection)
+
+- 부정 선택자: 선택자::not(선택자)(li:not(.item))

@@ -1,0 +1,94 @@
+<!-- div 태그를 기준으로 바로 한 단계 아래에 위치한 h1, h2, ul 태그를 자손이라고 하며, div 태그 아래에 위치한 모든 태그를 후손이라고 함-->
+<body>
+  <div>
+    <h1>CSS3 선택자 기본</h1>
+    <h2>기본 선택자</h2>
+    <ul>
+      <li>전체 선택자</li>
+      <li>태그 선택자</li>
+      <li>아이디 선택자와 클래스 선택자</li>
+    </ul>
+  </div>
+</body>
+
+<!--1. 후손 선택자-->
+<!--기본 예제 5-5. 후손 선택자-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Selector Basic</title>
+    <style>
+      #header h1 {
+        color: red;
+      }
+      #section h1 {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1 class="title">Lorem ipsum</h1>
+      <div id="nav">
+        <h1>Navigation</h1>
+      </div>
+    </div>
+    <div id="section">
+      <h1 class="title">Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </body>
+</html>
+
+<!--2. 자손 선택자-->
+<!--기본 예제 5-6. 자손 선택자-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Selector Basic</title>
+    <style>
+      #header > h1 {
+        color: red;
+      }
+      #section > h1 {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1 class="title">Lorem ipsum</h1>
+      <div id="nav">
+        <h1>Navigation</h1>
+      </div>
+    </div>
+    <div id="section">
+      <h1 class="title">Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Selector Basic</title>
+    <style>
+      table > tr > th {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>이름</th>
+        <th>지역</th>
+      </tr>
+      <tr>
+        <th>윤인성</th>
+        <th>서울특별시 강서구 내발산동</th>
+      </tr>
+    </table>
+  </body>
+</html>
