@@ -1,0 +1,159 @@
+<!-- 2. 뷰포트 태그 -->
+<!-- 기본 예제 8-1. 뷰포트 설정 -->
+<!-- 1. viewport meta 태그 사용하지 않기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Viewport Meta</title>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </body>
+</html>
+
+<!-- 2. viewport meta 태그 사용하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Viewport Meta</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1" />
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </body>
+</html>
+
+<!-- 3. 미디어 쿼리 설정 -->
+<!-- 기본 예제 8-2. 모니터와 프린터 구별 -->
+<!-- 1. @media 규칙을 사용한 미디어 쿼리 사용하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Media Type</title>
+    <style>
+      @media screen {
+        body {
+          background-color: red;
+        }
+      }
+      @media print {
+        body {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </body>
+</html>
+
+<!-- 2. @media 속성을 사용한 미디어 쿼리 사용하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Media Type</title>
+    <link rel="stylesheet" href="screen.css" media="screen" />
+    <link rel="stylesheet" href="print.css" media="print" />
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </body>
+</html>
+
+/* screen.css */ @media screen { body { background-color: red; } } /* print.css
+*/ @media print { body { background-color: red; } }
+
+<!-- 기본 예제 8-3. 스마트폰, 태블릿 pc, 데스크톱 구분 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Media Feature</title>
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1"
+    />
+    <style>
+      /* 스마트폰 */
+      @media screen and (max-width: 767px) {
+        body {
+          background-color: red;
+        }
+      }
+
+      /* 태블릿 pc */
+      @media screen and (max-width: 768px) and (max-width: 959px) {
+        body {
+          background-color: green;
+        }
+      }
+
+      /* 데스크톱 */
+      @media screen and (max-width: 960px) {
+        body {
+          background-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </body>
+</html>
+
+<!-- 기본 예제 8-4. 화면 방향 전환 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Media Feature</title>
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1"
+    />
+    <style>
+      @media screen and (orientation: portrait) {
+        body {
+          background-color: red;
+        }
+      }
+      @media screen and (orientation: landscape) {
+        body {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </body>
+</html>
+
+<!-- 일반적인 미디어 쿼리 작성 순서 -->
+<style>
+  /* 데스크톱 */
+  @media screen and (max-width: 960px) {
+    body {
+      background-color: blue;
+    }
+  }
+
+  /* 스마트폰 */
+  @media screen and (max-width: 767px) {
+    body {
+      background-color: red;
+    }
+  }
+
+  /* 태블릿 pc */
+  @media screen and (max-width: 768px) and (max-width: 959px) {
+    body {
+      background-color: green;
+    }
+  }
+</style>

@@ -1,0 +1,283 @@
+<!-- 기본 예제 8-5. 반응형 웹 패턴 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>패턴 1</title>
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 960px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      #menu {
+        width: 260px;
+        float: left;
+      }
+
+      #section {
+        width: 700px;
+        float: right;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      @media screen and (max-width: 767px) {
+        /* 스마트폰 사이즈에서는 전부 해제합니다. */
+        body {
+          width: auto;
+        }
+        #menu {
+          width: auto;
+          float: none;
+        }
+        #section {
+          width: auto;
+          float: none;
+        }
+      }
+      @media screen and (orientation: landscape) {
+        body {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu">
+      <ul>
+        <li>Menu A</li>
+        <li>Menu B</li>
+        <li>Menu C</li>
+      </ul>
+    </div>
+    <div id="section">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </body>
+</html>
+
+<!-- 기본 예제 8-6. 반응형 웹 패턴 2 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>패턴 2</title>
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 960px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      #menu {
+        width: 260px;
+        float: right;
+      }
+
+      #section {
+        width: 700px;
+        float: left;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      @media screen and (max-width: 767px) {
+        /* 스마트폰 사이즈에서는 전부 해제합니다. */
+        body {
+          width: auto;
+        }
+        #menu {
+          width: auto;
+          float: none;
+        }
+        #section {
+          width: auto;
+          float: none;
+        }
+      }
+      @media screen and (orientation: landscape) {
+        body {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu">
+      <ul>
+        <li>Menu A</li>
+        <li>Menu B</li>
+        <li>Menu C</li>
+      </ul>
+    </div>
+    <div id="section">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </body>
+</html>
+
+<!-- 기본 예제 8-7. 반응형 웹 패턴 3 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>패턴 3</title>
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 960px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      #menu {
+        width: 260px;
+        float: left;
+      }
+
+      #section {
+        width: 700px;
+        float: right;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      @media screen and (max-width: 767px) {
+        /* 스마트폰 사이즈에서는 전부 해제합니다. */
+        body {
+          width: auto;
+        }
+        #menu {
+          width: auto;
+          float: none;
+        }
+        #section {
+          width: auto;
+          float: none;
+        }
+      }
+      @media screen and (orientation: landscape) {
+        body {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="section">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div id="menu">
+      <ul>
+        <li>Menu A</li>
+        <li>Menu B</li>
+        <li>Menu C</li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+<!-- 기본 예제 8-8. 반응형 웹 패턴 4 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>패턴 4</title>
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        width: 960px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      #menu {
+        width: 260px;
+        float: right;
+      }
+
+      #section {
+        width: 700px;
+        float: left;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      @media screen and (max-width: 767px) {
+        /* 스마트폰 사이즈에서는 전부 해제합니다. */
+        body {
+          width: auto;
+        }
+        #menu {
+          width: auto;
+          float: none;
+        }
+        #section {
+          width: auto;
+          float: none;
+        }
+      }
+      @media screen and (orientation: landscape) {
+        body {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="section">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div id="menu">
+      <ul>
+        <li>Menu A</li>
+        <li>Menu B</li>
+        <li>Menu C</li>
+      </ul>
+    </div>
+  </body>
+</html>
