@@ -1,0 +1,68 @@
+<!-- 1. 선언과 호출, 실행 우선순위 -->
+<!-- 기본 예제 9-12. 함수 선언 -->
+<!-- 1. 익명 함수 선언하기 -->
+<script>
+  // 함수를 선언합니다.
+  let 함수 = function () {
+    alert('함수_01');
+    alert('함수_02');
+  };
+
+  // 출력합니다.
+  alert(typeof 함수 + ' : ' + 함수);
+</script>
+
+<!-- 2. 선언적 함수 선언하기 -->
+<script>
+  // 함수를 선언합니다.
+  function 함수() {
+    alert('함수_01');
+    alert('함수_02');
+  }
+
+  // 출력합니다.
+  alert(typeof 함수 + ' : ' + 함수);
+</script>
+
+<!-- 2. 매개변수와 반환 값 -->
+<!-- 기본 예제 9-13. 매개변수와 반환 값이 있는 함수 -->
+<script>
+  // 함수를 선언합니다.
+  function f(x) {
+    return x * x;
+  }
+
+  // 함수를 호출합니다.
+  alert(f(3));
+</script>
+
+<!-- 3. 콜백 함수 -->
+<!-- 기본 예제 9-14. 콜백 함수 -->
+<script>
+  // 함수를 선언합니다.
+  function callTenTimes(callback) {
+    for (let i = 0; i < 10; i++) {
+      callback();
+    }
+  }
+
+  // 변수를 선언합니다.
+  let fun = function () {
+    alert('함수 호출');
+  };
+
+  callTenTimes(fun);
+</script>
+
+<script>
+  // 함수를 선언합니다.
+  function callTenTimes(callback) {
+    for (let i = 0; i < 10; i++) {
+      callback();
+    }
+  }
+
+  callTenTimes(function () {
+    alert('함수 호출');
+  });
+</script>
