@@ -1,0 +1,123 @@
+<!-- 1. 입력 양식 개요-->
+<body>
+  <form>
+    <input type="text" name="search" />
+    <input type="submit" />
+  </form>
+</body>
+
+<form action="전송 위치" method="전송 방식"></form>
+
+<!-- GET 전송 방식 -->
+<body>
+  <form method="get">
+    <input type="text" name="search" />
+    <input type="submit" />
+  </form>
+</body>
+
+<!-- POST 전송 방식 -->
+<body>
+  <form method="post">
+    <input type="text" name="search" />
+    <input type="submit" />
+  </form>
+</body>
+
+<!-- 기본 예제 4-1. 기본 입력 양식 태그-->
+<body>
+  <form>
+    <!-- 사용자가 입력하는 입력 양식 -->
+    <input type="text" name="text" value="text" /><br />
+    <input type="password" name="password" value="password" /><br />
+    <input type="file" name="file" value="file" /><br />
+    <input type="checkbox" name="checkbox" value="checkbox" /><br />
+    <input type="radio" name="radio" value="radio" /><br />
+
+    <!-- 보이지 않는 입력 양식 -->
+    <input type="hidden" name="hidden" value="hidden" /><br />
+
+    <!-- 버튼 -->
+    <input type="button" value="button" /><br />
+    <input type="reset" value="reset" /><br />
+    <input type="submit" value="submit" /><br />
+    <input type="image" src="http://via.placeholder.com/100x100" />
+  </form>
+</body>
+
+<!-- 기본 예제 4-2. 간단한 입력 양식 생성-->
+<body>
+  <form>
+    <table>
+      <tr>
+        <td><label for="username">이름</label></td>
+        <td><input id="username" type="text" name="username" /></td>
+      </tr>
+      <tr>
+        <td>성별</td>
+        <td>
+          <input id="man" type="radio" name="gender" value="m" />
+          <label for="man">남자</label>
+          <input id="woman" type="radio" name="gender" value="w" />
+          <label for="woman">여자</label>
+        </td>
+      </tr>
+    </table>
+    <input type="submit" value="가입" />
+  </form>
+</body>
+
+<!-- 기본 예제 4-3. 선택 가능한 입력 양식 -->
+<!-- 1. 한 항목만 선택하기 -->
+<body>
+  <select>
+    <option>김밥</option>
+    <option>떡볶이</option>
+    <option>순대</option>
+    <option>어묵</option>
+  </select>
+</body>
+
+<!-- 2. 여러 항목 선택하기 -->
+<body>
+  <select multiple="multiple">
+    <option>김밥</option>
+    <option>떡볶이</option>
+    <option>순대</option>
+    <option>어묵</option>
+  </select>
+</body>
+
+<!-- 3. 선택 옵션 묶기 -->
+<body>
+  <select>
+    <optgroup label="HTML5">
+      <option>Multimedia Tag</option>
+      <option>Connectivity</option>
+      <option>Device Access</option>
+    </optgroup>
+    <optgroup label="CSS3">
+      <option>Animation</option>
+      <option>3D Transform</option>
+    </optgroup>
+  </select>
+</body>
+
+<!-- 기본 예제 4-4. 연관 있는 입력 양식 그룹으로 묶기 -->
+<body>
+  <form>
+    <fieldset>
+      <legend>입력 양식</legend>
+      <table>
+        <tr>
+          <td><label for="name">이름</label></td>
+          <td><input id="name" type="text" /></td>
+        </tr>
+        <tr>
+          <td><label for="mail">이메일</label></td>
+          <td><input id="mail" type="email" /></td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</body>
