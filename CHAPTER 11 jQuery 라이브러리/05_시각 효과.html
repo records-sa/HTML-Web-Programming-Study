@@ -1,0 +1,190 @@
+<!-- 1. 시각 효과 메서드 -->
+<!-- 기본 예제 11-11. 태그가 사라졌다가 나타나는 효과 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jQuery Basic</title>
+    <script src="'http://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      // 이벤트를 연결합니다.
+      $(document).ready(function () {
+        // 이벤트를 연결합니다.
+        $('button').click(function () {
+          // 간단한 효과를 적용합니다.
+          $('.page').fadeToggle('slow');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button>Toggle Show</button>
+    <div class="page">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </body>
+</html>
+
+<!-- 2. 애니메이션 효과 -->
+<!-- 기본 예제 11-12. 애니메이션 효과 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation Basic</title>
+    <script src="'http://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 스타일을 변경합니다.
+        $('#box')
+          .css({
+            width: 100,
+            height: 100,
+            background: 'red',
+          })
+          .animate(
+            {
+              width: 300,
+              opacity: 0.5,
+            },
+            500
+          );
+      });
+    </script>
+  </head>
+  <body>
+    <div id="box"></div>
+  </body>
+</html>
+
+<!-- 메서드 체이닝을 사용한 애니메이션 실행 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation Basic</title>
+    <script src="'http://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 스타일을 변경합니다.
+        $('#box')
+          .css({
+            width: 100,
+            height: 100,
+            background: 'red',
+            position: 'absolute',
+            left: 10,
+            rop: 10,
+          })
+          .animate(
+            {
+              width: 300,
+              opacity: 0.5,
+            },
+            500
+          )
+          .animate(
+            {
+              opacity: 1,
+              left: 100,
+              top: 200,
+            },
+            500
+          );
+      });
+    </script>
+  </head>
+  <body>
+    <div id="box"></div>
+  </body>
+</html>
+
+<!-- 상대적 증가 -->
+<script>
+  $(document).ready(function () {
+    // 스타일을 변경합니다.
+    $('#box')
+      .css({
+        width: 100,
+        height: 100,
+        background: 'red',
+        position: 'absolute',
+        left: 10,
+        rop: 10,
+      })
+      .animate(
+        {
+          height: '+=300',
+          width: '-=50',
+          left: '+=300',
+          opacity: 0.5,
+        },
+        500
+      );
+  });
+</script>
+
+<!-- 기본 예제 11-13. 애니메이션 효과 정지 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animation Basic</title>
+    <script src="'http://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 변수를 선언합니다.
+        let clearQueue = false;
+        let goToEnd = false;
+
+        // 이벤트를 연결합니다.
+        $('#clearQueue').change(function () {
+          clearQueue = $(this).prop('checked');
+        });
+
+        $('#goToEnd').change(function () {
+          goToEnd = $(this).prop('checked');
+        });
+
+        $('#stopButton').click(function () {
+          $('#box').stop(clearQueue, goToEnd);
+        });
+
+        // 스타일을 변경합니다.
+        $('#box').css({
+          width: 100,
+          height: 100,
+          background: 'red',
+        });
+
+        // 타이머를 연결합니다.
+        setInterval(function () {
+          $('#box')
+            .animate(
+              {
+                width: 200,
+              },
+              1000
+            )
+            .delay(1000)
+            .animate(
+              {
+                width: 100,
+                height: 100,
+              },
+              1000
+            );
+        }, 3000);
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 입력 양식 -->
+    <label>clearQueue</label>
+    <input type="checkbox" id="clearQueue" />
+    <br />
+    <label>goToEnd</label>
+    <input type="checkbox" id="goToEnd" />
+    <br />
+    <button id="stopButton">Stop</button>
+    <!-- 애니메이션 -->
+    <div id="box"></div>
+  </body>
+</html>
