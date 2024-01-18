@@ -1,0 +1,105 @@
+<!-- 1. 이벤트 연결 -->
+<!-- 기본 예제 10-7. 이벤트 연결 -->
+<!-- 1. 인라인 이벤트 모델 사용하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Event Basic</title>
+  </head>
+  <body>
+    <button onclick="alert('click')">버튼</button>
+  </body>
+</html>
+
+<!-- 2. script 태그에 인라인 이벤트 모델 사용하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Inline Event</title>
+    <script>
+      function buttonClick() {
+        alert('click');
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="buttonClick">버튼</button>
+  </body>
+</html>
+
+<!-- 기본 예제 10-8. 고전 이벤트 모델 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Traditional Event</title>
+    <script>
+      // 이벤트를 연결합니다.
+      window.onload = function () {
+        // 문서 객체를 선택합니다.
+        let button = document.getElementById('button');
+        // 이벤트를 연결합니다.
+        button.onclick = function () {
+          alert('click');
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <button id="button">버튼</button>
+  </body>
+</html>
+
+<!-- 이벤트 발생 객체 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Traditional Event</title>
+  </head>
+  <body>
+    <button id="button">버튼 -</button>
+    <script>
+      // 이벤트를 연결합니다.
+      document.getElementById('button').onclick = function () {
+        this.textContent = this.textContent + '🎶';
+      };
+    </script>
+  </body>
+</html>
+
+<!-- 2. 이벤트 사용 -->
+<!-- 기본 예제 10-9. 이벤트 정보 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Event Object</title>
+    <script>
+      window.onload = function (evnet) {
+        alert(event);
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
+
+<!-- 기본 예제 10-10. 기본 이벤트 제거 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Traditional Event - Default Event</title>
+    <script>
+      // 이벤트를 연결합니다.
+      window.onload = function () {
+        // 문서 객체를 선택합니다.
+        let button = document.getElementById('button');
+        // 이벤트를 연결합니다.
+        button.onclick = function () {
+          // 기본 이벤트를 제거합니다.
+          return false;
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <a id="button" href="'http://hanbit.co.kr">버튼</a>
+  </body>
+</html>

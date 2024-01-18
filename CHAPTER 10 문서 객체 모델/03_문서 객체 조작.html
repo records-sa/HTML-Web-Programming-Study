@@ -1,0 +1,129 @@
+<!-- 1. 글자 조작 -->
+<!-- 기본 예제 10-3. 내부 글자 변경 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM Basic</title>
+    <script>
+      // 이벤트를 연결합니다.
+      window.onload = function () {
+        // 변수를 선언합니다.
+        var output = '';
+        for (var i = 0; i < 10; i++) {
+          output = +'<h1>Header - ' + i + '</h1>';
+        }
+
+        // 문서 객체 내부의 글자를 변경합니다.
+        document.body.textContent = output;
+        // innerHTML 속성을 사용합니다.
+        document.body.innerHTML = output;
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="header">Header</h1>
+  </body>
+</html>
+
+<!-- 2. 스타일 조작 -->
+<!-- 기본 예제 10-4. 스타일 조작 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM Basic</title>
+    <script>
+      // 이벤트를 연결합니다.
+      window.onload = function () {
+        // 문서 객체를 추가합니다.
+        let output = '';
+        for (ler i = 0; i < 256; i++) {
+          output += '<div></div>';
+        }
+        document.body.innerHTML = output;
+
+        // 문서 객체를 선택합니다.
+        let divs = document.querySelectorAll('div');
+        for (let i = 0; i < divs.length; i++) {
+          // 변수를 선언합니다.
+          let div = divs[i];
+
+          // 스타일을 적용합니다.
+          div.style.height = '2px';
+          div.style.background = 'rgb(' + i + ', ' + i + ', ' + i + ')';
+        }
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
+
+<!-- 2. 속성 조작 -->
+<!-- 기본 예제 10-5. 문서 객체 속성 조작 -->
+<!-- 1. img 태그 속성 조작하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM Basic</title>
+    <script>
+      // 이벤트를 연결합니다.
+      window.onload = function () {
+        // 변수를 선언합니다.
+        let image = document.getElementById('image');
+
+        // 속성을 변경합니다.
+        image.src = 'http://via.placeholder.com/300x200';
+        image.width = 300;
+        image.height = 200;
+      };
+    </script>
+  </head>
+  <body>
+    <img id="image" />
+  </body>
+</html>
+
+<!-- 2. body 태그 속성 조작하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM Basic</title>
+    <script>
+      // 이벤트를 연결합니다.
+      window.onload = function () {
+        // 속성을 지정합니다.
+        document.body.setAttribute('data-custom', 'value');
+
+        // 속성을 추출합니다.
+        let dataCustom = document.body.getAttribute('data-custom');
+        alert(dataCustom);
+      };
+    </script>
+  </head>
+  <body>
+    <img id="image" />
+  </body>
+</html>
+
+<!-- 기본 예제 10-6. 문서 객체를 사용한 시간 표시 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Clock</title>
+    <script>
+      // 이벤트를 연결합니다.
+      window.onload = function () {
+        // 문서 객체를 선택합니다.
+        let clock = document.getElementById('clock');
+
+        // 1초마다 함수를 실행합니다.
+        setInterval(function () {
+          let now = new Date();
+          clock.innerHTML = now.toString();
+        }, 1000)
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="clock"></h1>
+  </body>
+</html>
