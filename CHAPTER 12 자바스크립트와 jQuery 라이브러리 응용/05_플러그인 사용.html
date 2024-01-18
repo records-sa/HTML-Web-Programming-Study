@@ -1,0 +1,65 @@
+<!-- 1. 라이트 박스 -->
+<!-- 응용 예제 12-5. LightBox 플러그인 사용 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LightBox</title>
+    <script src="'http://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      // 이벤트를 연결합니다.
+      $(document).ready(function () {
+        $('a.light').lightBox();
+      });
+    </script>
+  </head>
+  <body>
+    <a class="light" href="image1.jpg">LightBox</a>
+    <a class="light" href="image2.jpg">LightBox</a>
+    <a class="light" href="image3.jpg">LightBox</a>
+  </body>
+</html>
+
+<!-- 2. 카드 타일 -->
+<!-- 응용 예제 12-6. Masonry 플러그인 사용 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Masonry</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        background: black;
+        margin: 5px;
+      }
+    </style>
+    <script src="'http://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="'http://masonry.desandro.com/maronry.pkgd.min.js"></script>
+    <script>
+      // 이벤트를 연결합니다.
+      $(document).ready(function () {
+        // 문서 객체를 생성합니다.
+        for (let i = 0; i < 100; i++) {
+          $('<div></div>')
+            .addClass('box')
+            .css({
+              width: 100,
+              height: Math.floor(Math.random() * 100) + 50,
+            })
+            .appendTo('body');
+        }
+
+        // Masonry 플러그인을 적용합니다.
+        $('body').masonry({
+          columnWidth: 110,
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

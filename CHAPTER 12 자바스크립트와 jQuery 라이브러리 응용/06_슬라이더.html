@@ -1,0 +1,200 @@
+<!-- 응용 예제 12-7. jQuery 라이브러리를 사용한 슬라이더 갤러리 구현 -->
+<!-- 1. HTML 페이지 만들기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Slider Gallery</title>
+    <style></style>
+    <script src="'http://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      // 첫 번째 ready 이벤트
+      $(document).ready(function () {});
+
+      // 두 번째 ready 이벤트
+      $(document).ready(function () {});
+    </script>
+  </head>
+  <body></body>
+</html>
+
+<!-- 2. body 태그 구성하기 -->
+<body>
+  <div data-role="slider" data-width="500" data-height="300">
+    <div class="container">
+      <div class="item">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="item">
+        <h1>Donec at pharetra orci</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="item">
+        <h1>Integer nibh tellus</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </div>
+  <button id="left-button">⬅️</button>
+  <button id="right-button">➡️</button>
+</body>
+
+<!-- 3. 갤러리 구분 색상 적용하기 -->
+<style>
+  div.item:nth-child(1) {
+    background: blueviolet;
+  }
+  div.item:nth-child(2) {
+    background: pink;
+  }
+  div.item:nth-child(3) {
+    background: burlywood;
+  }
+</style>
+
+<!-- 4. 갤러리 스타일 적용하기 -->
+<script>
+  $(document).ready(function () {
+    let width = $('[data-role='slider']').attr('data-width');
+    let height = $('[data-role='slider']').attr('data-height');
+    let count = $('[data-role='slider'] div.item').length;
+  });
+
+  // 스타일을 적용합니다.
+  $('[data-role='slider']').css({
+    position: 'relative',
+    overflow: 'hidden',
+    width: width,
+    height: height
+  }).find('.container').css({
+    position: 'absolute',
+    width: count * width,
+    overflow: 'hidden'
+  }).find('item').css({
+    width: width,
+    height: height,
+    float: 'left'
+  })
+</script>
+
+<!-- 5. 갤러리 이벤트 연결하기 -->
+<script>
+  // 두 번째 ready 이벤트
+  $(document).ready(function () {
+    // 변수를 선언합니다.
+    let currentPage = 0;
+    let changePage = function () {
+      $('[data-role='slider'] > .container').animate({
+        left: -currentPage * width,
+      }, 500)
+    }
+
+    // 이벤트를 연결합니다.
+    $('#left-button').click(function () {});
+    $('#right-button').click(function () {});
+  });
+</script>
+
+<!-- 6. 갤러리 클릭 이벤트 구현하기 -->
+<script>
+  // 이벤트를 연결합니다.
+  $('#left-button').click(function () {
+    if (currentPage > 0) {
+      // 왼쪽으로 이동
+      currentPage = currentPage - 1;
+      changePage();
+    }
+  });
+  $('#right-button').click(function () {
+    if (currentPage < count - 1) {
+      // 오른쪽으로 이동
+      currentPage = currentPage + 1;
+      changePage();
+    }
+  });
+</script>
+
+<!-- 갤러리 전체 코드 확인하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Slider Gallery</title>
+    <style>
+      div.item:nth-child(1) {
+        background: blueviolet;
+      }
+      div.item:nth-child(2) {
+        background: pink;
+      }
+      div.item:nth-child(3) {
+        background: burlywood;
+      }
+    </style>
+    <script src="'http://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      $(document).ready(function () {
+                let width = $('[data-role='slider']').attr('data-width');
+                let height = $('[data-role='slider']').attr('data-height');
+                let count = $('[data-role='slider'] div.item').length;
+              });
+
+              // 스타일을 적용합니다.
+              $('[data-role='slider']').css({
+                position: 'relative',
+                overflow: 'hidden',
+                width: width,
+                height: height
+              }).find('.container').css({
+                position: 'absolute',
+                width: count * width,
+                overflow: 'hidden'
+              }).find('item').css({
+                width: width,
+                height: height,
+                float: 'left'
+              })
+
+              let currentPage = 0;
+          let changePage = function () {
+            $('[data-role='slider'] > .container').animate({
+              left: -currentPage * width
+            }, 500)
+          };
+          // 이벤트를 연결합니다.
+      $('#left-button').click(function () {
+        if (currentPage > 0) {
+          // 왼쪽으로 이동
+          currentPage = currentPage - 1;
+          changePage();
+        }
+      });
+      $('#right-button').click(function () {
+        if (currentPage < count - 1) {
+          // 오른쪽으로 이동
+          currentPage = currentPage + 1;
+          changePage();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div data-role="slider" data-width="500" data-height="300">
+      <div class="container">
+        <div class="item">
+          <h1>Lorem ipsum dolor sit amet</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="item">
+          <h1>Donec at pharetra orci</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="item">
+          <h1>Integer nibh tellus</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </div>
+    <button id="left-button">⬅️</button>
+    <button id="right-button">➡️</button>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!-- 응용 예제 12-3. 문서 객체 생성 -->
+<!-- 1. 문서 객체 생성하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jQuery Create</title>
+    <script src="'http://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      // 이벤트를 연결합니다.
+      $(document).ready(function () {
+        // 문서 객체를 생성합니다.
+        $('<h1>Create Document Object By jQuery</h1>');
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
+
+<!-- 2. appendTo() 메서드를 사용해 문서 객체 추가하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jQuery Create</title>
+    <script src="'http://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      // 이벤트를 연결합니다.
+      $(document).ready(function () {
+        // 문서 객체를 생성합니다.
+        $('<h1>Create Document Object By jQuery</h1>')
+          .css({
+            backgroundColor: 'black',
+            color: 'red',
+          })
+          .appendTo('body');
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
+
+<!-- 2. append() 메서드를 사용해 문서 객체 추가하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jQuery Create</title>
+    <script src="'http://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+      // 이벤트를 연결합니다.
+      $(document).ready(function () {
+        // 문서 객체를 생성합니다.
+        $('<h1>Create Document Object By jQuery</h1>')
+          .css({
+            backgroundColor: 'black',
+            color: 'red',
+          })
+          .append($dynamic);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
