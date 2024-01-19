@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>One True Layout</title>
+    <style>
+      body {
+        margin: 10px auto;
+        width: 500px;
+      }
+
+      #middle {
+        /* overflow: hidden; */
+        display: flex;
+      }
+      #left {
+        float: left;
+        width: 150px;
+        background: red;
+      }
+      #right {
+        float: right;
+        width: 350px;
+        background: blue;
+      }
+
+      #top {
+        background: green;
+      }
+      #bottom {
+        background: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    <div id="middle">
+      <div id="left">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </div>
+      <div id="right">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </div>
+    </div>
+    <div id="bottom">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </div>
+  </body>
+</html>
