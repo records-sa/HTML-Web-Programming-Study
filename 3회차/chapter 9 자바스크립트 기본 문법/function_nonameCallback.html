@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript Basic</title>
+    <script>
+      function callTenTimes(callback) {
+        for (let i = 0; i < 10; i++) {
+          callback();
+        }
+      }
+
+      callTenTimes(function () {
+        alert('call Function');
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
