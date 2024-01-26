@@ -1,4 +1,4 @@
-@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
 
@@ -10,10 +10,9 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 1rem;
   margin: 0;
-  background-color: #000;
-  color: #fff;
   left: 1.6rem;
   font-weight: 300;
+  font-size: 1.2rem;
 }
 
 a {
@@ -21,95 +20,50 @@ a {
   color: gainsboro;
 }
 
-/* Netflix FAQ with jQuery*/
+/* Millie books FAQ with jQuery*/
 .faq {
   height: 100vh;
+  background-color: #ffeb60;
 }
-
+.faq h1 {
+  text-align: center;
+}
 .faq-inner {
-  width: 700px;
+  width: 750px;
   margin: auto;
 }
-
 .faq-inner h1 {
   text-align: center;
-  font-size: 50px;
-  font-weight: 500;
+  margin-top: 0;
 }
-
 .accordion {
-  font-size: 1.6rem;
 }
-
-.accordion .title,
-.accordion .content {
-  background-color: #303030;
-  padding: 0.8rem 1rem;
-  margin-bottom: 0.5rem;
+.accordion-item {
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
 }
-
-.accordion .title {
+.accordion-item .title {
+  font-weight: bold;
   cursor: pointer;
 }
-
-.accordion .title:after {
-  content: '\e914';
-  font-family: xeicon;
+.accordion-item .title::after {
+  content: '\f107';
+  font-family: fontawesome;
   float: right;
-  margin-top: 0.5rem;
-  transition: 0.35s;
+  margin-top: 0.1rem;
 }
-
-.accordion .title.active:after {
-  transform: rotate(45deg);
+.accordion-item .title.active {
+  padding-bottom: 1rem;
 }
-
-.accordion .title.active {
-  background-color: #353b48;
+.accordion-item .title.active::after {
+  transform: rotateX(180deg);
 }
-
-.accordion .content {
+.accordion-item .content {
+  border-top: 1px solid #000;
+  font-size: 1rem;
+  padding-top: 1rem;
   display: none;
-}
-
-.newsletter {
-  width: 90%;
-  margin: auto;
-  text-align: center;
-  margin-top: 2rem;
-}
-.newsletter p {
-  font-size: 1.2rem;
-}
-.newsletter div {
-  display: flex;
-}
-
-.newsletter div input[type='email'],
-.newsletter div button {
-  border: none;
-  outline: none;
-  height: 4rem;
-  vertical-align: middle;
-  font-size: 1.2rem;
-  /* margin-right: -0.5rem; */
-}
-
-.newsletter div input[type='email'] {
-  /* width: 70%; */
-  flex: 3;
-}
-.newsletter div button {
-  background-color: #e84118;
-  color: #fff;
-  cursor: pointer;
-  /* width: 30%; */
-  flex: 1;
-}
-
-.newsletter div button::after {
-  content: '\e93f';
-  font-family: xeicon;
-  font-size: 2rem;
-  vertical-align: middle;
 }
