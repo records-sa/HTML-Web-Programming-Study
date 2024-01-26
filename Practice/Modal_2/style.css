@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* jQuery Fade In Out Modal */
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+.modal.active {
+  display: block;
+}
+.modal-content {
+  background-color: white;
+  width: 350px;
+  border-radius: 0.8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.8rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: slidefade 0.3s linear;
+}
+.btn-guide {
+  background-color: #2196f3;
+  color: white;
+  border-radius: 0.2rem;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  display: block;
+}
+.btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: grey;
+  font: 2rem;
+}
+
+.modal:target {
+  display: block;
+}
+
+@keyframes slidefade {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}

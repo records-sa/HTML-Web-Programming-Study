@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Fade In Out Madal</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="#none" class="modal-notice">Open Fade-In Modal</a>
+    <div class="modal">
+      <div class="modal-content">
+        <a href="#none" class="btn-close">X</a>
+        <h2>Welcome to Teams!</h2>
+        <img
+          width="100"
+          height="100"
+          src="https://img.icons8.com/color/100/get-along.png"
+          alt="get-along"
+        />
+        <p>
+          Microsoft Teams is a collaboration app built for hybrid work so you
+          and your team stay informed, organized, and connected - all in one
+          place.
+        </p>
+        <a href="#none" class="btn-guide">Open Guide</a>
+      </div>
+    </div>
+
+    <script>
+      $('.modal-notice').click(function () {
+        $('.modal').addClass('active');
+      });
+      $('.btn-close').click(function () {
+        $('.modal').removeClass('active');
+      });
+    </script>
+
+    <!-- fade in-out with jQuery
+       <script>
+      $('.modal-notice').click(function () {
+        $('.modal').fadeIn();
+      });
+      $('.btn-close').click(function () {
+        $('.modal').fadeOut();
+      });
+    </script> -->
+  </body>
+</html>
